@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { Link,useNavigate } from "react-router-dom"; // Added Link import
 
 import HomeLayout from "../Layout/HomeLayout";
+import GoogleLoginComponent from "../Components/GoogleLogin"
 import { login } from "../Redux/Slices/AuthSlice";
 
 function Login() {
@@ -91,7 +92,7 @@ function Login() {
           >
             Login
           </button>
-          
+          <GoogleLoginComponent />
           <p className="text-center text-blue-500 hover:text-blue-700 cursor-pointer">
             <Link to="/forgot-password">Forgot Password?</Link>
           </p>
