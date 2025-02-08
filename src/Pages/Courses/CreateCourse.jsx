@@ -63,7 +63,11 @@ export default function CreateCourse() {
         formData.append('category',userInput.category)
         formData.append('createdBy',userInput.createdBy)
         formData.append('thumbnail',userInput.thumbnail)
-
+        console.log('====================================');
+        console.log(formData.get('title'));
+        console.log(userInput);
+        
+        console.log('====================================');
         const res= await dispatch(createCourse(formData))
 
         if (res.payload?.success) {

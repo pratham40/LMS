@@ -66,9 +66,8 @@ function Signup() {
     formData.append("fullName", signupData.fullName);
     formData.append("email", signupData.email);
     formData.append("password", signupData.password);
-    formData.append("avatar", signupData.avatar);
-
-    const response = await dispatch(createAccount(formData));
+    formData.append("avatar", signupData.avatar);    
+    const response = dispatch(createAccount(formData));
     if (response?.payload?.success) {
       navigate("/");  
     }
